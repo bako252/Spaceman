@@ -1,0 +1,252 @@
+body
+{
+    background-color: #000000;
+    color: lightgray;
+    font-size: 28px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    opacity: 1;
+}
+
+#mainbox{
+    font-family: 'VT323', monospace;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 860px;
+    opacity: 1;
+}
+
+#top{
+    margin-top: 5%;
+    text-align: center;
+    font-size: 48px;
+    opacity: 1;
+}
+
+#announcement{
+    width: 80%;
+    text-align: center;
+    max-width: 500px;
+    font-size: 80px;
+    opacity: 1;
+}
+
+#alphabet{
+    text-align: center;
+    flex-direction: column-reverse;
+    justify-content: center;
+    opacity: 1;
+}
+
+.letter{
+    width: 30px;
+    height: 30px;
+    max-width: 30px;
+    max-height: 30px;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    border: 3px solid gray;
+    cursor: pointer;
+    border-radius: 30%;
+    transition: all .3s ease-in-out;
+    float: left;
+}
+.letter:hover{
+    border: 3px solid rgb(206, 206, 206);
+    background-color: #222222;
+    color: white;
+}
+
+.win{
+    color: #13dd35;
+    cursor: pointer;
+    font-size: 48px;
+}
+
+.win:hover{
+    color: #11af2b;
+}
+
+.lose{
+    color: #ec3030;
+    cursor: pointer;
+    font-size: 48px;
+}
+
+.lose:hover{
+    color: #a72424;
+}
+
+#images{
+    max-height: 280px;
+    position: relative;
+    empty-cells: show;
+}
+
+#images > img{
+    width: 100%;
+    max-width: 500px;
+}
+
+.border1{
+    position: absolute;
+    border: 300px solid #000000;
+    height: 300px;
+    top: 0;
+    left: 148%;
+}
+.border2{
+    position: absolute;
+    border: 300px solid #000000;
+    height: 300px;
+    top: 0;
+    right: 148%;
+}
+.border3{
+    position: absolute;
+    border: 50px solid #000000;
+    max-width: 500px;
+    min-width: 5px;
+    top: -134%;
+    right: -60%;
+}
+
+#whitespaceman{
+    z-index: -1;
+    position: absolute;
+    top: -500px;
+    animation: none;
+    transform: scaleX(-1);
+}
+
+#images{
+    display: flex;
+}
+
+#gun{
+    position: absolute;
+    top: -500px;
+    left: 0;
+}
+
+#bullet{
+    position: absolute;
+    top: -500px;
+    left: 0;
+    z-index: -1;
+}
+
+@media only screen and (max-width: 870px){
+    #images{width: 400px;}
+}
+@media only screen and (max-width: 680px){
+    #images{width: 300px;}
+    .border3{top: -100%; right: -45%;}
+}
+@media only screen and (max-width: 580px){
+    #images{width: 250px;}
+    .border3{top: -110%; right: -50%;}
+}
+@media only screen and (max-width: 480px){
+    #images{width: 230px;}
+    .border3{top: -118%; right: -55%;}
+}
+@media only screen and (max-width: 420px){
+    #plansza{font-size: 40px;}
+    .border3{top: -125%; right: -60%;}
+    #images{width: 200px;}
+    .letter{
+        width: 25px;
+        height: 25px;
+        max-width: 25px;
+        max-height: 25px;
+        text-align: center;
+        padding: 4px;
+        margin: 4px;
+        border: 3px solid gray;
+        cursor: pointer;
+        border-radius: 30%;
+        transition: all .3s ease-in-out;
+        float: left;
+        font-size: 25px;
+    }
+    .letter:hover{
+        border: 3px solid rgb(206, 206, 206);
+        background-color: #222222;
+        color: white;
+    }
+}
+@media only screen and (max-width: 370px){
+    #images{width: 180px;}
+    .border3{top: -136%; right: -60%;}
+}
+
+@keyframes whitespaceman1{
+    from{ top: 0; left: 105%;}
+    to{ top: 0; left: 95%;}
+}
+
+@keyframes whitespaceman2{
+    from{ top: 0; left: 95%;}
+    to{ top: 0; left: 60%;}
+}
+
+@keyframes whitespaceman3{
+    0%{ top: 0; left: 60%;}
+    20%{ top: 0; left: 60%;}
+    100%{ top: 0; left: 110%;}
+}
+
+@keyframes whitespaceman4{
+    0%{ top: -120%; left: 80%;}
+    80%{ top: -90%; left: 80%;}
+    100%{ top: -95%; left: 80%;}
+}
+
+@keyframes whitespaceman5v1{
+    0%{ top: -95%; left: 80%;}
+    50%{ top: -90%; left: 80%;}
+    100%{ top: -150%; left: 80%;}
+}
+
+@keyframes whitespaceman5v2{
+    from{ top: 0; left: -110%;}
+    to{ top: 0; left: -95%;}
+}
+
+@keyframes whitespaceman6{
+    from{ top: 0; left: -95%;}
+    to{ top: 0; left: -70%;}
+}
+
+@keyframes whitespaceman7v1{
+    from{ top: 0; left: -70%;}
+    to{ top: 0; left: -60%;}
+}
+
+@keyframes whitespaceman7v2{
+    from{ top: 0; left: -60%;}
+    to{ top: 0; left: -30%;}
+}
+
+@keyframes whitespaceman8{
+    0%{ top: 0; left: -30%;}
+    50%{ top: 0; left: -60%;}
+    100%{ top: 0; left: -95%;}
+}
+
+@keyframes gun{
+    0%{ top: 0; }
+    20%{ top: 0; transform: rotate(-70deg);}
+    60%{ top: 0; transform: rotate(0deg);}
+    100%{ top: 0; }
+}
+
+@keyframes bullet{
+    0%{ top: 0;}
+    100%{ top: 0; left: -40%;}
+}
