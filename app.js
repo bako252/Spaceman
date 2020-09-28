@@ -12,7 +12,6 @@ function Generate(randomnr){
     phrase = phrase_list[randomnr];
     length = phrase.length;
     phrase = phrase.toUpperCase();
-    console.log(phrase);
     for(i=0; i<length; i++){
         if(phrase.charAt(i)==" ") phrase1 = phrase1 + " ";
         else phrase1 = phrase1 + "-";
@@ -33,7 +32,6 @@ function Randomnumber(){
         }
     }
     repeat.push(randomnr);
-    console.log(repeat.length);
     Generate(randomnr);
 }
 
@@ -85,7 +83,6 @@ String.prototype.replace = function(place, character){
 
 function sprawdz(letter){
     var hit = false;
-    console.log(length);
     for(i=0; i<length; i++){
         if(phrase.charAt(i) == alphabet.charAt(letter)){
             phrase1 = phrase1.replace(i, phrase.charAt(i));
