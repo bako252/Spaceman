@@ -16,7 +16,7 @@ function Generate(randomnr){
         if(phrase.charAt(i)==" ") phrase1 = phrase1 + " ";
         else phrase1 = phrase1 + "-";
     }
-    write_phrase();
+    write_phrase(phrase1);
 }
 
 function Randomnumber(){
@@ -71,8 +71,9 @@ function firstrun(){
     Randomnumber();
 }
 
-function write_phrase(){
-    document.getElementById("top").innerHTML = "Phrase nr" + randomnr + "<br/>" + phrase1;
+function write_phrase(phrase){
+    document.getElementById("top").innerHTML = "";
+    document.getElementById("top").innerHTML = "Phrase nr" + randomnr + "<br/>" + phrase;
 }
 
 String.prototype.replace = function(place, character){
@@ -89,7 +90,7 @@ function sprawdz(letter){
             hit = true;
         }
     }
-    write_phrase();
+    write_phrase(phrase1);
     var element = "lit" + letter;
 
     if(hit){
@@ -162,6 +163,7 @@ function unlock(){
 }
 
 function Gameover(){
+    write_phrase(phrase);
     document.getElementById("announcement").innerHTML = "<br /> Gameover! <br /> <span class='lose' onclick = 'reset()'>Reset</span>";
     document.getElementById("images").style.opacity  = "0";
         document.getElementById("alphabet").style.opacity  = "0";;
